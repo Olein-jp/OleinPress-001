@@ -1,0 +1,23 @@
+@mixin link( $color-base: $base-font-color_link ) {
+  color: $color-base;
+  &:hover,
+  &:visited,
+  &:focus,
+  &:active {
+    color: darken( $color-base, 10% );
+  }
+}
+
+@mixin centered-image( $height: 400px ) {
+  position: relative;
+  overflow: hidden;
+  height: $height;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    width: 100%;
+    height: auto;
+  }
+}

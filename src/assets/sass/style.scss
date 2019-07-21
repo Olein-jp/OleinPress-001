@@ -1,0 +1,523 @@
+@import "core/core";
+@import "foundation/foundation";
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.wp-caption {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+    layout
+--------------------------------------------------------------*/
+.l-site {
+  position: relative;
+}
+
+.l-site-header {
+
+}
+
+/*--------------------------------------------------------------
+    object
+--------------------------------------------------------------*/
+/* component
+------------------------------*/
+.c-container {
+  width: 100%;
+  padding-left: $spacer;
+  padding-right: $spacer;
+  @include mq-up(md) {
+    width: 750px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+  @include mq-up(lg) {
+    width: 960px;
+  }
+}
+
+.c-gf {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.c-page-header {
+  margin: 30px 0;
+  text-align: center;
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 1em 3em;
+    font-size: 2.0rem;
+    line-height: 1;
+    font-weight: bold;
+    &:before,
+    &:after {
+      position: absolute;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 6px;
+    }
+    &:before {
+      top: 0;
+      border-top: 2px solid $gray-500;
+      border-bottom: 1px solid $gray-500;
+    }
+    &:after {
+      bottom: 0;
+      border-top: 1px solid $gray-500;
+      border-bottom: 2px solid $gray-500;
+    }
+  }
+}
+
+.c-entry {
+  margin-bottom: $spacer * 3;
+  @include mq-up(md) {
+    width: 49%;
+  }
+  @include mq-up(lg) {
+    width: 31%;
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    @include link( $base-font-color_text );
+    text-decoration: none;
+  }
+  &__header {
+    order: 2;
+  }
+  &__title {
+    margin: .5em 0;
+    line-height: 1.2;
+    font-size: 2.6rem;
+  }
+  &__thumbnail {
+    order: 0;
+    position: relative;
+    margin: 0;
+    @include centered-image( 59.6666vw );
+    @include mq-up(md) {
+      height: 240px;
+    }
+    @include mq-up(lg) {
+      height: 195px;
+    }
+    &-label {
+      display: inline-block;
+      padding: .75em 1em;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: $base-font-color_text;
+      color: white;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+  }
+  &__excerpt {
+    order: 3;
+    color: $gray-500;
+    p {
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+  }
+  &__footer {
+    order: 1;
+  }
+  &__meta {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    &-item {
+      display: inline-block;
+      margin-right: 1em;
+      font-size: 1.2rem;
+      line-height: 1;
+      .published:before,
+      .updated:before {
+        font-family: "Font Awesome 5 Free";
+        margin-right: 5px;
+        color: $gray-500;
+      }
+      .published {
+        &:before {
+          content: "\f017";
+        }
+      }
+      .updated {
+        &:before {
+          content: "\f021";
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+/* project
+------------------------------*/
+.p-site-branding {
+  text-align: center;
+  padding: 21px 0;
+  @include mq-up(md) {
+    padding: 50px 0;
+  }
+
+  .wp-custom-logo & {
+    padding: 5px 0;
+    @include mq-up(md) {
+      padding: 50px 0;
+    }
+  }
+}
+
+.p-site-title {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 2.4rem;
+  @include mq-up(md) {
+    font-size: 3.0rem;
+  }
+  a {
+    text-decoration: none;
+    @include link( $base-font-color_text );
+  }
+
+  & + .p-site-description {
+    margin-top: $spacer;
+  }
+
+  //.custom-logo {
+  //  width: 100%;
+  //  @include mq-up(md) {
+  //    width: 500px;
+  //    height: auto;
+  //  }
+  //  @include mq-up(lg) {
+  //    width: 375px;
+  //  }
+  //}
+
+  .wp-custom-logo & .custom-logo {
+    height: 60px;
+    width: auto;
+    @include mq-up(md) {
+      width: 500px;
+      height: auto;
+    }
+    @include mq-up(lg) {
+      width: 375px;
+    }
+  }
+}
+
+.p-site-description {
+  margin: 0;
+  font-size: 1.2rem;
+  @include mq-up(md) {
+    font-size: 1.4rem;
+  }
+}
+
+.p-hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba( 255,255,255, .95 );
+  z-index: 10001;
+  @include mq-up(lg) {
+    display: none;
+  }
+}
+
+// Global menu for smart phone and tablet
+@include mq-down(md) {
+  .p-global-menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 110vw;
+    display: block;
+    background-color: rgba( 255,255,255, 1 );
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    overflow-y: auto;
+    transition: all .75s ease;
+    &.is-active {
+      left: 0;
+    }
+  }
+  .p-global-menu {
+    margin-top: 68px;
+    margin-bottom: 50px;
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        position: relative;
+        font-size: 1.4rem;
+        border-top: 1px solid #f4f4f4;
+        &:before {
+          position: absolute;
+          top: 21px;
+          margin-top: -5px;
+          right: 1em;
+          content: "\f105";
+          font-family: "Font Awesome 5 Free";
+          font-weight: bold;
+          color: $gray-500;
+        }
+        &.menu-item-has-children {
+          &:before {
+            content: "\f107";
+          }
+        }
+        &:last-child {
+          border-bottom: 1px solid #f4f4f4;
+        }
+        a {
+          display: inline-block;
+          padding: 15px 10px;
+          text-decoration: none;
+          @include link( $base-font-color_text );
+        }
+        .sub-menu {
+          margin: 0;
+          padding: 0 0 0 1em;
+          list-style-type: none;
+          li {
+            &:before {
+              content: none;
+              //color: $gray-200;
+            }
+            &.menu-item-has-children:before {
+              content: "\f107";
+            }
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Global Menu for laptop
+@include mq-up(lg) {
+  .p-global-menu-wrap {
+    padding: 0 0 30px;
+  }
+  .p-global-menu {
+    &__list {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      li {
+        position: relative;
+        display: inline-block;
+        font-size: 1.4rem;
+        padding: 15px;
+        a {
+          text-decoration: none;
+          @include link( $base-font-color_text );
+        }
+        &.menu-item-has-children {
+          position: relative;
+          &:before {
+            position: absolute;
+            content: "\f107";
+            font-family: "Font Awesome 5 Free";
+            font-weight: bold;
+            color: $gray-300;
+            bottom: -5px;
+            left: 50%;
+          }
+        }
+        .sub-menu {
+          display: none;
+          position: absolute;
+          //display: block;
+          background-color: $base-font-color_text;
+          top: 55px;
+          left: 0;
+          padding: 0;
+          margin: 0;
+          z-index: 10000;
+          li {
+            position: relative;
+            width: 200px;
+            text-align: left;
+            a {
+              @include link(white);
+            }
+            &.menu-item-has-children {
+              position: relative;
+              &:before {
+                content: "\f105";
+                left: inherit;
+                bottom: inherit;
+                right: 1em;
+                top: 50%;
+                margin-top: -10px;
+              }
+            }
+            .sub-menu {
+              position: absolute;
+              top: 0;
+              left: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.p-slider {
+  .slick-list,
+  .slick-track {
+    height: calc( 66.666vw );
+    @include mq-up(lg) {
+      height: 670px;
+    }
+    @include mq-up(xl) {
+      height: 800px;
+    }
+  }
+  &__item {
+    //@include centered-image(200px);
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate( -50%, -50% );
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.p-breadcrumbs {
+  &__list {
+    margin: 0;
+    padding: $spacer 0;
+    list-style-type: none;
+  }
+  &__item {
+    display: inline-block;
+    font-size: 1.4rem;
+    a {
+      @include link( $base-font-color_text );
+    }
+    &:after {
+      content: "\f105";
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      margin-left: $spacer / 2;
+      margin-right: $spacer / 2;
+    }
+    &:last-child {
+      &:after {
+        content: "";
+        margin: 0;
+      }
+    }
+  }
+}
+
+.p-entry-wrap {
+  @include mq-up(md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  @include mq-up(lg) {
+    &:after {
+      content: "";
+      display: block;
+      width: 31%;
+    }
+  }
+}
+
+.p-posts-pagination {
+  padding: 30px 0;
+  &__list {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      text-align: center;
+      li {
+        display: inline-block;
+        a {
+          text-decoration: none;
+          @include link( $base-font-color_text );
+        }
+        .page-numbers {
+          display: inline-block;
+          padding: 13px;
+          margin: 0 3px;
+          font-size: 1.6rem;
+          line-height: 1;
+          border: 1px solid $base-font-color_text;
+          transition: all 1s ease;
+          &:hover {
+            background-color: #f4f4f4;
+          }
+        }
+        .prev,
+        .next {
+          border: none;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+        .current {
+          background-color: #f4f4f4;
+        }
+      }
+    }
+  }
+}
+
+.p-site-footer {
+
+}
+
+.p-footer-widget-area {
+
+}
+
+.p-copyright {
+  background-color: $base-font-color_text;
+  p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    color: white;
+    @include mq-up(md) {
+      text-align: center;
+    }
+    a {
+      @include link( white );
+    }
+  }
+}
+
+/* utility
+------------------------------*/
