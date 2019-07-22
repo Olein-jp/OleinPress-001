@@ -4,7 +4,9 @@ php:
 sudo: false
 branches:
   only:
-  - master
+    - master
+    - develop
+    - "/\\d+\\.\\d+\\.\\d+?.*/"
 env:
   global:
     - GIT_COMMITTER_NAME=travis-ci
