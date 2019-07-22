@@ -1,13 +1,10 @@
 language: php
 php:
   - 7.2
-  - 7.3
 sudo: false
 branches:
   only:
   - master
-  - develop
-  - "/\\d+\\.\\d+\\.\\d+?.*/"
 env:
   global:
     - GIT_COMMITTER_NAME=travis-ci
