@@ -12,6 +12,7 @@
         "phpunit/phpunit": "7.*"
     },
     "require": {
-        "inc2734/wp-breadcrumbs": "^3.0"
+        "inc2734/wp-breadcrumbs": "^3.0",
+        "inc2734/wp-github-theme-updater": "^2.0"
     }
 }
