@@ -74,17 +74,17 @@
 			?>
 		</div><!-- #site-navigation -->
 	</header><!-- #masthead -->
+	<?php if ( is_home() ) : ?>
 	<div class="p-slider">
 		<div class="p-slider__item">
 			<img src="<?php echo get_template_directory_uri() . '/assets/images/sample-image-01.jpg'; ?>" alt="" class="p-slider__image">
 		</div>
-		<div class="p-slider__item">
-			<img src="<?php echo get_template_directory_uri() . '/assets/images/sample-image-02.jpg'; ?>" alt="" class="p-slider__image">
-		</div>
 	</div>
+	<?php endif; ?>
 
-	<div id="content" class="site-content">
-		<?php
-		if ( ! is_home() ) {
-			get_template_part( 'template-parts/breadcrumbs' );
-		} ?>
+	<?php
+	if ( ! is_home() ) {
+		get_template_part( 'template-parts/breadcrumbs' );
+	} ?>
+
+	<div id="content" class="l-site-content <?php op001_container_switch(); ?>">

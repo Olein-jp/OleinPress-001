@@ -197,3 +197,20 @@ require get_template_directory() . '/inc/posts-pagination.php';
  * inc2734/wp-github-theme-updater
  */
 require get_template_directory() . '/inc/wp-github-theme-updater.php';
+
+/**
+ * custom tag widget
+ */
+function op001_widget_tagcloud_custom( $args ) {
+	$my_args = array(
+		'orderby'  => 'count',
+		'order'    => 'DESC',
+		'number'   => 0,
+		'largest'  => 12,
+		'smallest' => 12,
+		'unit'     => 'px',
+	);
+	$args = wp_parse_args( $args, $my_args );
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'op001_widget_tagcloud_custom' );

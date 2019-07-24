@@ -13,10 +13,10 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="p-site-footer">
+	<footer id="colophon" class="l-site-footer">
 		<?php if ( is_active_sidebar( 'footer' ) ) : ?>
 		<div class="p-footer-widget-area">
-			<div class="c-container">
+			<div class="p-footer-widget-area__inner p-footer-widget-area__inner_col2 c-container">
 				<?php dynamic_sidebar( 'footer' ); ?>
 			</div>
 		</div>

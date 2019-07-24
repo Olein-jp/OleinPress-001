@@ -29,7 +29,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php op001_post_thumbnail(); ?>
+	<?php //op001_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -52,8 +52,4 @@
 		) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php op001_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
