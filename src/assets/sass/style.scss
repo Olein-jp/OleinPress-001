@@ -205,7 +205,7 @@ img {
 .c-widget {
   margin: 0 0 1.5em;
   select {
-    max-width: 100%;
+    width: 100%;
   }
   ul,
   ol {
@@ -216,15 +216,29 @@ img {
       font-size: 1.4rem;
       line-height: 1.3;
       margin-bottom: .5em;
-      a:hover {
-        text-decoration: underline;
+      a {
+        text-decoration: none;
+        @include link( $base-font-color_text );
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .children {
+        padding-left: 1em;
+        margin-top: .5em;
       }
     }
   }
-  &-title {
-    margin: 0 0 1em;
-    padding: 5px;
+  .widget-title {
+    margin: 0 0 .25em;
+    padding: .25em .5em;
+    line-height: 1.3;
     border-bottom: 1px solid $gray-500;
+    a {
+      color: $base-font-color_text;
+      @include link( $base-font-color_text );
+      text-decoration: none;
+    }
   }
 
   &.widget_tag_cloud {
@@ -236,7 +250,94 @@ img {
         line-height: 1.2;
         background: rgba( 0,0,0, .3 );
         margin-bottom: .5em;
+        color: white;
+        text-decoration: none;
       }
+    }
+  }
+
+  &.widget_calendar {
+    table {
+      caption {
+        padding: 5px;
+        font-size: 1.2rem;
+        background-color: $gray-100;
+      }
+      thead {
+
+      }
+      tfoot {
+        a {
+          display: inline-block;
+          padding: 10px;
+          font-size: 1.2rem;
+          width: 100%;
+          background: $gray-100;
+          @include link( $base-font-color_text );
+          text-decoration: none;
+          text-align: center;
+        }
+      }
+      tbody {
+        tr {
+          td {
+            text-align: center;
+            a {
+              display: inline-block;
+              background-color: $base-font-color_text;
+              @include link( white );
+              width: 100%;
+              text-decoration: none;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.widget_rss {
+    ul {
+      li {
+        margin-bottom: 1em;
+        a {
+          text-decoration: underline;
+        }
+        .rss-date,
+        .rssSummary,
+        cite {
+          display: block;
+          font-size: 1.2rem;
+          margin-bottom: .25em;
+        }
+        .rss-date {
+          margin-top: .5em;
+        }
+        .rssSummary {
+        }
+        cite {
+
+        }
+      }
+    }
+  }
+  &.widget_nav_menu {
+    ul {
+      li {
+        a {
+          display: inline-block;
+          padding-bottom: 3px;
+        }
+        .sub-menu {
+          padding-left: 1em;
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+  &.widget_text {
+    .textwidget {
+      @include content-styles( .8 );
     }
   }
 }

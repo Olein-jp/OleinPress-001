@@ -1424,7 +1424,7 @@ img {
 .c-widget {
   margin: 0 0 1.5em; }
   .c-widget select {
-    max-width: 100%; }
+    width: 100%; }
   .c-widget ul,
   .c-widget ol {
     margin: 0;
@@ -1435,20 +1435,157 @@ img {
       font-size: 1.4rem;
       line-height: 1.3;
       margin-bottom: .5em; }
-      .c-widget ul li a:hover,
-      .c-widget ol li a:hover {
-        text-decoration: underline; }
-  .c-widget-title {
-    margin: 0 0 1em;
-    padding: 5px;
+      .c-widget ul li a,
+      .c-widget ol li a {
+        text-decoration: none;
+        color: #444444; }
+        .c-widget ul li a:hover, .c-widget ul li a:visited, .c-widget ul li a:focus, .c-widget ul li a:active,
+        .c-widget ol li a:hover,
+        .c-widget ol li a:visited,
+        .c-widget ol li a:focus,
+        .c-widget ol li a:active {
+          color: #2b2b2b; }
+        .c-widget ul li a:hover,
+        .c-widget ol li a:hover {
+          text-decoration: underline; }
+      .c-widget ul li .children,
+      .c-widget ol li .children {
+        padding-left: 1em;
+        margin-top: .5em; }
+  .c-widget .widget-title {
+    margin: 0 0 .25em;
+    padding: .25em .5em;
+    line-height: 1.3;
     border-bottom: 1px solid #adb5bd; }
+    .c-widget .widget-title a {
+      color: #444444;
+      color: #444444;
+      text-decoration: none; }
+      .c-widget .widget-title a:hover, .c-widget .widget-title a:visited, .c-widget .widget-title a:focus, .c-widget .widget-title a:active {
+        color: #2b2b2b; }
   .c-widget.widget_tag_cloud .tagcloud a {
     display: inline-block;
     padding: 3px 5px;
     margin-right: 5px;
     line-height: 1.2;
     background: rgba(0, 0, 0, 0.3);
-    margin-bottom: .5em; }
+    margin-bottom: .5em;
+    color: white;
+    text-decoration: none; }
+  .c-widget.widget_calendar table caption {
+    padding: 5px;
+    font-size: 1.2rem;
+    background-color: #f8f9fa; }
+  .c-widget.widget_calendar table tfoot a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 100%;
+    background: #f8f9fa;
+    color: #444444;
+    text-decoration: none;
+    text-align: center; }
+    .c-widget.widget_calendar table tfoot a:hover, .c-widget.widget_calendar table tfoot a:visited, .c-widget.widget_calendar table tfoot a:focus, .c-widget.widget_calendar table tfoot a:active {
+      color: #2b2b2b; }
+  .c-widget.widget_calendar table tbody tr td {
+    text-align: center; }
+    .c-widget.widget_calendar table tbody tr td a {
+      display: inline-block;
+      background-color: #444444;
+      color: white;
+      width: 100%;
+      text-decoration: none;
+      border-radius: 5px; }
+      .c-widget.widget_calendar table tbody tr td a:hover, .c-widget.widget_calendar table tbody tr td a:visited, .c-widget.widget_calendar table tbody tr td a:focus, .c-widget.widget_calendar table tbody tr td a:active {
+        color: #e6e6e6; }
+  .c-widget.widget_rss ul li {
+    margin-bottom: 1em; }
+    .c-widget.widget_rss ul li a {
+      text-decoration: underline; }
+    .c-widget.widget_rss ul li .rss-date,
+    .c-widget.widget_rss ul li .rssSummary,
+    .c-widget.widget_rss ul li cite {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: .25em; }
+    .c-widget.widget_rss ul li .rss-date {
+      margin-top: .5em; }
+  .c-widget.widget_nav_menu ul li a {
+    display: inline-block;
+    padding-bottom: 3px; }
+  .c-widget.widget_nav_menu ul li .sub-menu {
+    padding-left: 1em;
+    margin-bottom: 1em; }
+  .c-widget.widget_text .textwidget h1,
+  .c-widget.widget_text .textwidget h2,
+  .c-widget.widget_text .textwidget h3,
+  .c-widget.widget_text .textwidget h4,
+  .c-widget.widget_text .textwidget h5,
+  .c-widget.widget_text .textwidget h6 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    line-height: 1.3; }
+  .c-widget.widget_text .textwidget h1 + h2,
+  .c-widget.widget_text .textwidget h2 + h3,
+  .c-widget.widget_text .textwidget h3 + h4,
+  .c-widget.widget_text .textwidget h4 + h5,
+  .c-widget.widget_text .textwidget h5 + h6 {
+    margin-top: 1em; }
+  .c-widget.widget_text .textwidget h1 {
+    font-size: 2.24rem; }
+  .c-widget.widget_text .textwidget h2 {
+    font-size: 1.76rem; }
+  .c-widget.widget_text .textwidget h3 {
+    font-size: 1.44rem; }
+  .c-widget.widget_text .textwidget h4 {
+    font-size: 1.28rem; }
+  .c-widget.widget_text .textwidget h5 {
+    font-size: 1.12rem; }
+  .c-widget.widget_text .textwidget h6 {
+    font-size: 0.96rem; }
+  .c-widget.widget_text .textwidget p {
+    font-size: 1.28rem;
+    line-height: 1.7;
+    margin-bottom: 2em; }
+  .c-widget.widget_text .textwidget ul,
+  .c-widget.widget_text .textwidget ol {
+    margin-left: 0;
+    padding-left: 1em; }
+  .c-widget.widget_text .textwidget blockquote {
+    background: #f4f4f4;
+    padding: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em; }
+    .c-widget.widget_text .textwidget blockquote p {
+      font-size: 1.12rem;
+      font-style: italic; }
+      .c-widget.widget_text .textwidget blockquote p:last-child {
+        margin-bottom: 0; }
+  .c-widget.widget_text .textwidget table {
+    margin-bottom: 2em; }
+  .c-widget.widget_text .textwidget img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom; }
+  .c-widget.widget_text .textwidget figure {
+    max-width: 100% !important; }
+  .c-widget.widget_text .textwidget .wp-caption.aligncenter,
+  .c-widget.widget_text .textwidget .wp-caption.alignnone {
+    margin-bottom: 2em; }
+  .c-widget.widget_text .textwidget .alignleft {
+    float: left;
+    margin-right: 1em; }
+  .c-widget.widget_text .textwidget .alignright {
+    float: right;
+    margin-left: 1em; }
+  .c-widget.widget_text .textwidget .aligncenter {
+    margin: 0 auto; }
+  .c-widget.widget_text .textwidget .wp-caption-text {
+    font-size: 0.96rem; }
+  .c-widget.widget_text .textwidget pre {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px; }
 
 /* project
 ------------------------------*/

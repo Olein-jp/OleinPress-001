@@ -53,7 +53,7 @@ if ( ! function_exists( 'op001_container_switch' ) ) :
 	function op001_container_switch() {
 		$container_switch = '';
 
-		if ( is_single() || is_page() || is_home() ) {
+		if ( is_single() || is_page() || is_home() || is_archive() ) {
 			$container_switch = 'c-container ';
 		}
 
