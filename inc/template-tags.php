@@ -45,6 +45,9 @@ if ( ! function_exists( 'op001_posted_by' ) ) :
 	}
 endif;
 
+/**
+ * switch for container css classes
+ */
 if ( ! function_exists( 'op001_container_switch' ) ) :
 
 	function op001_container_switch() {
@@ -60,5 +63,27 @@ if ( ! function_exists( 'op001_container_switch' ) ) :
 
 		echo $container_switch;
 
+	}
+endif;
+
+if ( ! function_exists( 'op001_thumbnail_output') ) :
+
+	function op001_thumbnail_output() {
+		if ( is_singular() ) :
+			?>
+				<div class="p-post-thumbnail">
+					<?php the_post_thumbnail(); ?>
+				</div>
+			<?php else: ?>
+				<figure class="c-entry__thumbnail">
+					<?php if ( has_post_thumbnail() ) : ?>
+						<?php the_post_thumbnail(); ?>
+					<?php else: ?>
+						<img src="<?php echo get_template_directory_uri() . '/assets/images/sample-image-01.jpg'; ?>" alt="" class="c-entry-thumbnail__image">
+					<?php endif; ?>
+					<span class="c-entry__thumbnail-label">カテゴリー名</span>
+				</figure>
+		<?php
+		endif;
 	}
 endif;

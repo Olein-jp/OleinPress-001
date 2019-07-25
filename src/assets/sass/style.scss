@@ -397,6 +397,7 @@ img {
     padding: 0 0 30px;
   }
   .p-global-menu {
+    ul,
     &__list {
       margin: 0;
       padding: 0;
@@ -621,5 +622,76 @@ img {
   }
 }
 
+.p-single {
+  display: flex;
+  flex-direction: column;
+  &-header {
+    order: 2;
+  }
+  &-title {
+    font-size: 2.6rem;
+    line-height: 1.3;
+    margin: .5em 0;
+  }
+  &-thumbnail {
+    order: 0;
+  }
+  &-content {
+    order: 3;
+    @include content-styles();
+  }
+  &-footer {
+    order: 1;
+  }
+  &-meta {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.p-posts-navigation {
+  @include mq-up(lg) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__title_previous,
+    &__title_next {
+      width: 49%;
+    }
+  }
+  &__title {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin: 0;
+    a {
+      @include link( $base-font-color_text );
+    }
+    &_previous,
+    &_next {
+      margin: $spacer 0;
+      background-color: $gray-100;
+      padding: $spacer;
+      &::before {
+        display: block;
+        font-size: 1.2rem;
+        line-height: 1;
+        margin-bottom: .5em;
+        color: $gray-500;
+      }
+    }
+    &_previous {
+      &:before {
+        content: "前の投稿";
+      }
+    }
+    &_next {
+      text-align: right;
+      &:before {
+        content: "次の投稿";
+        text-align: right;
+      }
+    }
+  }
+}
 /* utility
 ------------------------------*/

@@ -27,13 +27,27 @@ get_header();
 				/* Start the Loop */
 				while ( have_posts() ) :
 					the_post();
+					?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class( 'c-entry' ); ?>>
+					<a class="c-entry__wrap" href="<?php the_permalink(); ?>" rel="bookmark">
+						<header class="c-entry__header">
+							<?php the_title( '<h2 class="c-entry__title c-gf">', '</h2>' ); ?>
+						</header><!-- .entry-header -->
 
-					/*
-					 * Include the Post-Type-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content-normal' );
+						<?php op001_thumbnail_output() ?>
+
+						<div class="c-entry__excerpt">
+							<?php the_excerpt(); ?>
+						</div>
+
+						<footer class="c-entry__footer">
+							<ul class="c-entry__meta">
+								<?php op001_posted_on(); ?>
+							</ul>
+						</footer>
+					</a>
+				</article><!-- #post-<?php the_ID(); ?> -->
+				<?php
 
 				endwhile;
 
