@@ -199,6 +199,11 @@ require get_template_directory() . '/inc/posts-pagination.php';
 require get_template_directory() . '/inc/wp-github-theme-updater.php';
 
 /**
+ * custom comment settings
+ */
+require get_template_directory() . '/inc/comment-settings.php';
+
+/**
  * custom tag widget
  */
 function op001_widget_tagcloud_custom( $args ) {

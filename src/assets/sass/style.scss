@@ -342,6 +342,46 @@ img {
   }
 }
 
+.c-comment-item {
+  margin-top: 50px;
+  &__header {
+    display: flex;
+  }
+  &__gravatar {
+    margin: 0;
+    img {
+      border-radius: 50%;
+    }
+  }
+  &__meta {
+    padding-left: $spacer;
+    padding-top: 17px;
+  }
+  &__author {
+    margin: 0 0 $spacer / 3;
+    line-height: 1;
+    &-link {
+      display: inline-block;
+      margin-left: 5px;
+      @include link( $gray-500 );
+    }
+  }
+  &__time {
+    color: $gray-500;
+    font-size: 1.2rem;
+  }
+
+  &__content {
+    @include content-styles(.9);
+  }
+
+  .children {
+    margin: 0;
+    padding: 0 0 0 1em;
+    list-style-type: none;
+  }
+}
+
 /* project
 ------------------------------*/
 .p-site-branding {
@@ -823,5 +863,23 @@ img {
     }
   }
 }
+
+.p-comments-area {
+
+}
+.p-comments-title {
+  background-color: $base-font-color_text;
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 15px 5px;
+}
+.p-comment-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
 /* utility
 ------------------------------*/
