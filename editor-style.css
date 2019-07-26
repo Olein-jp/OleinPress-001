@@ -1684,6 +1684,9 @@ img {
     margin: 0;
     padding: 0 0 0 1em;
     list-style-type: none; }
+    .c-comment-item .children li {
+      border-left: 5px solid #f8f9fa;
+      padding-left: 15px; }
 
 /* project
 ------------------------------*/
