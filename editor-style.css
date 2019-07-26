@@ -1847,10 +1847,15 @@ img {
 .p-footer-widget-area {
   background-color: #444444;
   color: white; }
-  .p-footer-widget-area a {
+  .p-footer-widget-area .c-widget ol li a,
+  .p-footer-widget-area .c-widget ul li a {
     color: white;
     text-decoration: none; }
-    .p-footer-widget-area a:hover, .p-footer-widget-area a:visited, .p-footer-widget-area a:focus, .p-footer-widget-area a:active {
+    .p-footer-widget-area .c-widget ol li a:hover, .p-footer-widget-area .c-widget ol li a:visited, .p-footer-widget-area .c-widget ol li a:focus, .p-footer-widget-area .c-widget ol li a:active,
+    .p-footer-widget-area .c-widget ul li a:hover,
+    .p-footer-widget-area .c-widget ul li a:visited,
+    .p-footer-widget-area .c-widget ul li a:focus,
+    .p-footer-widget-area .c-widget ul li a:active {
       color: #e6e6e6; }
   .p-footer-widget-area__inner {
     padding-top: 30px;

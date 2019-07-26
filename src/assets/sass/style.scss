@@ -675,9 +675,16 @@ img {
 .p-footer-widget-area {
   background-color: $base-font-color_text;
   color: white;
-  a {
-    @include link( white );
-    text-decoration: none;
+  .c-widget {
+    ol,
+    ul {
+      li {
+        a {
+          @include link( white );
+          text-decoration: none;
+        }
+      }
+    }
   }
   &__inner {
     padding-top: 30px;
