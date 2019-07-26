@@ -81,7 +81,12 @@ if ( ! function_exists( 'op001_thumbnail_output') ) :
 					<?php else: ?>
 						<img src="<?php echo get_template_directory_uri() . '/assets/images/sample-image-01.jpg'; ?>" alt="" class="c-entry-thumbnail__image">
 					<?php endif; ?>
-					<span class="c-entry__thumbnail-label">カテゴリー名</span>
+					<?php
+					if ( is_home() || is_single() ) {
+						$category = get_the_category();
+						echo '<span class="c-entry__thumbnail-label">' . $category[0]->cat_name . '</span>';
+					}
+					?>
 				</figure>
 		<?php
 		endif;
