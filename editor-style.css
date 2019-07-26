@@ -1457,11 +1457,11 @@ img {
     padding: .25em .5em;
     line-height: 1.3;
     border-bottom: 1px solid #adb5bd; }
-    .c-widget .widget-title a {
+    .c-widget .widget-title .rsswidget {
       color: #444444;
       color: #444444;
       text-decoration: none; }
-      .c-widget .widget-title a:hover, .c-widget .widget-title a:visited, .c-widget .widget-title a:focus, .c-widget .widget-title a:active {
+      .c-widget .widget-title .rsswidget:hover, .c-widget .widget-title .rsswidget:visited, .c-widget .widget-title .rsswidget:focus, .c-widget .widget-title .rsswidget:active {
         color: #2b2b2b; }
   .c-widget.widget_tag_cloud .tagcloud a {
     display: inline-block;
@@ -1812,7 +1812,10 @@ img {
     width: 31%; } }
 
 .p-posts-pagination {
-  padding: 30px 0; }
+  margin: 30px 0; }
+  @media screen and (min-width: 992px) {
+    .p-posts-pagination {
+      margin: 50px 0; } }
   .p-posts-pagination__list ul {
     margin: 0;
     padding: 0;
@@ -1857,6 +1860,15 @@ img {
     .p-footer-widget-area .c-widget ul li a:focus,
     .p-footer-widget-area .c-widget ul li a:active {
       color: #e6e6e6; }
+  .p-footer-widget-area .c-widget .widget-title a {
+    color: white; }
+    .p-footer-widget-area .c-widget .widget-title a:hover, .p-footer-widget-area .c-widget .widget-title a:visited, .p-footer-widget-area .c-widget .widget-title a:focus, .p-footer-widget-area .c-widget .widget-title a:active {
+      color: #e6e6e6; }
+  .p-footer-widget-area .c-widget.widget_calendar table caption {
+    background-color: #adb5bd; }
+  .p-footer-widget-area .c-widget.widget_calendar table tfoot a {
+    background-color: #adb5bd;
+    color: white; }
   .p-footer-widget-area__inner {
     padding-top: 30px;
     padding-bottom: 30px; }
@@ -1890,25 +1902,36 @@ img {
       .p-copyright p a:hover, .p-copyright p a:visited, .p-copyright p a:focus, .p-copyright p a:active {
         color: #e6e6e6; }
 
-.p-single {
+.p-single,
+.p-page {
   display: flex;
   flex-direction: column; }
-  .p-single-header {
+  .p-single-header,
+  .p-page-header {
     order: 2; }
-  .p-single-title {
+  .p-single-title,
+  .p-page-title {
     font-size: 2.6rem;
     line-height: 1.3;
     margin: .5em 0; }
-  .p-single-thumbnail {
+  .p-single-thumbnail,
+  .p-page-thumbnail {
     order: 0; }
-  .p-single-content {
+  .p-single-content,
+  .p-page-content {
     order: 3; }
     .p-single-content h1,
     .p-single-content h2,
     .p-single-content h3,
     .p-single-content h4,
     .p-single-content h5,
-    .p-single-content h6 {
+    .p-single-content h6,
+    .p-page-content h1,
+    .p-page-content h2,
+    .p-page-content h3,
+    .p-page-content h4,
+    .p-page-content h5,
+    .p-page-content h6 {
       margin-top: 2em;
       margin-bottom: 1em;
       line-height: 1.3; }
@@ -1916,66 +1939,95 @@ img {
     .p-single-content h2 + h3,
     .p-single-content h3 + h4,
     .p-single-content h4 + h5,
-    .p-single-content h5 + h6 {
+    .p-single-content h5 + h6,
+    .p-page-content h1 + h2,
+    .p-page-content h2 + h3,
+    .p-page-content h3 + h4,
+    .p-page-content h4 + h5,
+    .p-page-content h5 + h6 {
       margin-top: 1em; }
-    .p-single-content h1 {
+    .p-single-content h1,
+    .p-page-content h1 {
       font-size: 2.8rem; }
-    .p-single-content h2 {
+    .p-single-content h2,
+    .p-page-content h2 {
       font-size: 2.2rem; }
-    .p-single-content h3 {
+    .p-single-content h3,
+    .p-page-content h3 {
       font-size: 1.8rem; }
-    .p-single-content h4 {
+    .p-single-content h4,
+    .p-page-content h4 {
       font-size: 1.6rem; }
-    .p-single-content h5 {
+    .p-single-content h5,
+    .p-page-content h5 {
       font-size: 1.4rem; }
-    .p-single-content h6 {
+    .p-single-content h6,
+    .p-page-content h6 {
       font-size: 1.2rem; }
-    .p-single-content p {
+    .p-single-content p,
+    .p-page-content p {
       font-size: 1.6rem;
       line-height: 1.7;
       margin-bottom: 2em; }
     .p-single-content ul,
-    .p-single-content ol {
+    .p-single-content ol,
+    .p-page-content ul,
+    .p-page-content ol {
       margin-left: 0;
       padding-left: 1em; }
-    .p-single-content blockquote {
+    .p-single-content blockquote,
+    .p-page-content blockquote {
       background: #f4f4f4;
       padding: 1em;
       margin-top: 2em;
       margin-bottom: 2em; }
-      .p-single-content blockquote p {
+      .p-single-content blockquote p,
+      .p-page-content blockquote p {
         font-size: 1.4rem;
         font-style: italic; }
-        .p-single-content blockquote p:last-child {
+        .p-single-content blockquote p:last-child,
+        .p-page-content blockquote p:last-child {
           margin-bottom: 0; }
-    .p-single-content table {
+    .p-single-content table,
+    .p-page-content table {
       margin-bottom: 2em; }
-    .p-single-content img {
+    .p-single-content img,
+    .p-page-content img {
       max-width: 100%;
       height: auto;
       vertical-align: bottom; }
-    .p-single-content figure {
+    .p-single-content figure,
+    .p-page-content figure {
       max-width: 100% !important; }
     .p-single-content .wp-caption.aligncenter,
-    .p-single-content .wp-caption.alignnone {
+    .p-single-content .wp-caption.alignnone,
+    .p-page-content .wp-caption.aligncenter,
+    .p-page-content .wp-caption.alignnone {
       margin-bottom: 2em; }
-    .p-single-content .alignleft {
+    .p-single-content .alignleft,
+    .p-page-content .alignleft {
       float: left;
       margin-right: 1em; }
-    .p-single-content .alignright {
+    .p-single-content .alignright,
+    .p-page-content .alignright {
       float: right;
       margin-left: 1em; }
-    .p-single-content .aligncenter {
+    .p-single-content .aligncenter,
+    .p-page-content .aligncenter {
       margin: 0 auto; }
-    .p-single-content .wp-caption-text {
+    .p-single-content .wp-caption-text,
+    .p-page-content .wp-caption-text {
       font-size: 1.2rem; }
-    .p-single-content pre {
+    .p-single-content pre,
+    .p-page-content pre {
       background: #f8f9fa;
       padding: 15px;
       border-radius: 5px; }
-  .p-single-footer {
+  .p-single-footer,
+  .p-page-footer {
     order: 1; }
-  .p-single-meta {
+  .p-single-meta,
+  .p-page-meta {
     padding: 0;
     margin: 0; }
 

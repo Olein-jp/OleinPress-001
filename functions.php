@@ -120,7 +120,7 @@ function op001_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'op001' ),
 		'before_widget' => '<section id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h4 class="c-widget-title">',
+		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) );
 }
