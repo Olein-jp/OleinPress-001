@@ -21,7 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="l-site">
+<div id="page" class="l-site p-page-wrap">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'op001' ); ?></a>
 
 	<header id="masthead" class="l-site-header">

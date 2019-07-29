@@ -172,11 +172,6 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
@@ -202,6 +197,12 @@ require get_template_directory() . '/inc/wp-github-theme-updater.php';
  * custom comment settings
  */
 require get_template_directory() . '/inc/comment-settings.php';
+
+/**
+ * customizer
+ */
+require get_template_directory() . '/inc/customizer/initialize.php';
+require get_template_directory() . '/inc/customizer/customizer.php';
 
 /**
  * custom tag widget

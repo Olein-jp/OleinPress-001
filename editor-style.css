@@ -1690,6 +1690,9 @@ img {
 
 /* project
 ------------------------------*/
+.p-page-wrap {
+  background-color: rgba(255, 255, 255, 0.85); }
+
 .p-site-branding {
   text-align: center;
   padding: 21px 0; }
@@ -1978,6 +1981,9 @@ img {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between; } }
+    @media screen and (min-width: 992px) {
+      .p-footer-widget-area__inner_col4 section {
+        width: 24%; } }
     @media screen and (min-width: 992px) {
       .p-footer-widget-area__inner_col3 section {
         width: 31%; } }

@@ -14,9 +14,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="l-site-footer">
-		<?php if ( is_active_sidebar( 'footer' ) ) : ?>
+		<?php if ( is_active_sidebar( 'footer' ) ) :
+			$footer_widget_col_num = get_theme_mod( 'op-footer-col-number' );
+			?>
 		<div class="p-footer-widget-area">
-			<div class="p-footer-widget-area__inner p-footer-widget-area__inner_col2 c-container">
+			<div class="p-footer-widget-area__inner p-footer-widget-area__inner_col<?php echo $footer_widget_col_num; ?> c-container">
 				<?php dynamic_sidebar( 'footer' ); ?>
 			</div>
 		</div>
