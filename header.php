@@ -74,13 +74,7 @@
 			?>
 		</div><!-- #site-navigation -->
 	</header><!-- #masthead -->
-	<?php if ( is_home() ) : ?>
-<!--	<div class="p-slider">-->
-<!--		<div class="p-slider__item">-->
-<!--			<img src="--><?php //echo get_template_directory_uri() . '/assets/images/sample-image-01.jpg'; ?><!--" alt="" class="p-slider__image">-->
-<!--		</div>-->
-<!--	</div>-->
-	<?php endif; ?>
+	<?php get_template_part( 'template-parts/slider' ); ?>
 
 	<?php
 	if ( ! is_home() ) {

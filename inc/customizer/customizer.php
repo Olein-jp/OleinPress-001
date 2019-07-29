@@ -15,3 +15,8 @@ function op_remove_default_customizer_section( $wp_customize ) {
  * Layout
  */
 require get_template_directory() . '/inc/customizer/customizer-layout.php';
+
+/**
+ * Theme option
+ */
+require get_template_directory() . '/inc/customizer/customizer-slider.php';
