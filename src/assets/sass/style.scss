@@ -560,7 +560,8 @@ img {
           line-height: 1.2;
           padding: 15px;
         }
-        &.menu-item-has-children {
+        &.menu-item-has-children,
+        &.page_item_has_children {
           position: relative;
           &:before {
             position: absolute;
@@ -572,7 +573,8 @@ img {
             left: 50%;
           }
         }
-        .sub-menu {
+        .sub-menu,
+        .children {
           display: none;
           position: absolute;
           //display: block;
