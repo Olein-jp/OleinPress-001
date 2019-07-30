@@ -20,3 +20,8 @@ require get_template_directory() . '/inc/customizer/customizer-layout.php';
  * Theme option
  */
 require get_template_directory() . '/inc/customizer/customizer-slider.php';
+
+/**
+ * title tagline
+ */
+require get_template_directory() . '/inc/customizer/customizer-title-tagline.php';

@@ -27,22 +27,19 @@
 	<header id="masthead" class="l-site-header">
 		<div class="p-site-branding c-container">
 			<?php
-			if ( get_custom_logo() ) {
+			if ( has_custom_logo() ) {
 				if ( is_front_page() && is_home() ) :
 					?>
 					<h1 class="p-site-title"><?php the_custom_logo(); ?></h1>
 				<?php else: ?>
 					<p class="p-site-title"><?php the_custom_logo(); ?></p>
-			<?php
-				endif;
+				<?php endif;
 			} else {
 				if ( is_front_page() && is_home() ) :
 					?>
 					<h1 class="p-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
 												rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-				else :
-					?>
+				<?php else: ?>
 					<p class="p-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
 											   rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
@@ -51,12 +48,13 @@
 			?>
 			<?php
 			$op001_description = get_bloginfo( 'description', 'display' );
-			if ( $op001_description || is_customize_preview() ) :
+			if ( $op001_description ) :
 				?>
 				<p class="p-site-description"><?php echo $op001_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 		</div>
-		<button class="p-hamburger hamburger hamburger--squeeze" type="button" aria-label="Menu" aria-controls="navigation">
+		<button class="p-hamburger hamburger hamburger--squeeze" type="button" aria-label="Menu"
+				aria-controls="navigation">
 				<span class="hamburger-box">
 					<span class="hamburger-inner"></span>
 				</span>
