@@ -1888,15 +1888,21 @@ img {
               .p-global-menu-wrap .p-global-menu__list > ul li .sub-menu li a:hover,
               .p-global-menu-wrap .p-global-menu__list > ul li .children li a:hover {
                 padding-left: .75em; }
-            .p-global-menu-wrap ul li .sub-menu li.menu-item-has-children,
+            .p-global-menu-wrap ul li .sub-menu li.menu-item-has-children, .p-global-menu-wrap ul li .sub-menu li.page_item_has_children,
             .p-global-menu-wrap ul li .children li.menu-item-has-children,
+            .p-global-menu-wrap ul li .children li.page_item_has_children,
             .p-global-menu-wrap .p-global-menu__list > ul li .sub-menu li.menu-item-has-children,
-            .p-global-menu-wrap .p-global-menu__list > ul li .children li.menu-item-has-children {
+            .p-global-menu-wrap .p-global-menu__list > ul li .sub-menu li.page_item_has_children,
+            .p-global-menu-wrap .p-global-menu__list > ul li .children li.menu-item-has-children,
+            .p-global-menu-wrap .p-global-menu__list > ul li .children li.page_item_has_children {
               position: relative; }
-              .p-global-menu-wrap ul li .sub-menu li.menu-item-has-children:before,
+              .p-global-menu-wrap ul li .sub-menu li.menu-item-has-children:before, .p-global-menu-wrap ul li .sub-menu li.page_item_has_children:before,
               .p-global-menu-wrap ul li .children li.menu-item-has-children:before,
+              .p-global-menu-wrap ul li .children li.page_item_has_children:before,
               .p-global-menu-wrap .p-global-menu__list > ul li .sub-menu li.menu-item-has-children:before,
-              .p-global-menu-wrap .p-global-menu__list > ul li .children li.menu-item-has-children:before {
+              .p-global-menu-wrap .p-global-menu__list > ul li .sub-menu li.page_item_has_children:before,
+              .p-global-menu-wrap .p-global-menu__list > ul li .children li.menu-item-has-children:before,
+              .p-global-menu-wrap .p-global-menu__list > ul li .children li.page_item_has_children:before {
                 content: "\f105";
                 left: inherit;
                 bottom: inherit;
@@ -1904,9 +1910,13 @@ img {
                 top: 50%;
                 margin-top: -10px; }
             .p-global-menu-wrap ul li .sub-menu li .sub-menu,
+            .p-global-menu-wrap ul li .sub-menu li .children,
             .p-global-menu-wrap ul li .children li .sub-menu,
+            .p-global-menu-wrap ul li .children li .children,
             .p-global-menu-wrap .p-global-menu__list > ul li .sub-menu li .sub-menu,
-            .p-global-menu-wrap .p-global-menu__list > ul li .children li .sub-menu {
+            .p-global-menu-wrap .p-global-menu__list > ul li .sub-menu li .children,
+            .p-global-menu-wrap .p-global-menu__list > ul li .children li .sub-menu,
+            .p-global-menu-wrap .p-global-menu__list > ul li .children li .children {
               position: absolute;
               top: 0;
               left: 200px; } }

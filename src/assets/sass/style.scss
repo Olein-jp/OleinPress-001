@@ -596,7 +596,8 @@ img {
                 padding-left: .75em;
               }
             }
-            &.menu-item-has-children {
+            &.menu-item-has-children,
+            &.page_item_has_children {
               position: relative;
               &:before {
                 content: "\f105";
@@ -607,7 +608,8 @@ img {
                 margin-top: -10px;
               }
             }
-            .sub-menu {
+            .sub-menu,
+            .children {
               position: absolute;
               top: 0;
               left: 200px;
