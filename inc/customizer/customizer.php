@@ -9,6 +9,8 @@ function op_remove_default_customizer_section( $wp_customize ) {
 	$wp_customize->remove_section('colors');
 	// remove header image
 	$wp_customize->remove_section('header_image');
+	// remove display header text control
+	$wp_customize->remove_control('display_header_text');
 }
 
 /**
