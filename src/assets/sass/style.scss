@@ -544,10 +544,8 @@ img {
 @include mq-up(lg) {
   .p-global-menu-wrap {
     padding: 0 0 30px;
-  }
-  .p-global-menu {
     ul,
-    &__list {
+    .p-global-menu__list > ul {
       margin: 0;
       padding: 0;
       text-align: center;
