@@ -31,7 +31,6 @@ Framework::control(
 		'label'       => __( 'Copyright', 'op001' ),
 		'description' => __( 'HTML available', 'op001' ),
 		'default'     => $copyright,
-		'type'        => 'option',
 	]
 );
 
