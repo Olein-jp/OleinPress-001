@@ -555,10 +555,12 @@ img {
         position: relative;
         display: inline-block;
         font-size: 1.4rem;
-        padding: 15px;
         a {
+          display: inline-block;
           text-decoration: none;
           @include link( $base-font-color_text );
+          line-height: 1.2;
+          padding: 15px;
         }
         &.menu-item-has-children {
           position: relative;
@@ -587,7 +589,12 @@ img {
             width: 200px;
             text-align: left;
             a {
+              display: inline-block;
               @include link(white);
+              transition: all .5s ease;
+              &:hover {
+                padding-left: .75em;
+              }
             }
             &.menu-item-has-children {
               position: relative;

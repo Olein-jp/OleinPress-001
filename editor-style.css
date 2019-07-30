@@ -1813,11 +1813,13 @@ img {
     .p-global-menu ul li, .p-global-menu__list li {
       position: relative;
       display: inline-block;
-      font-size: 1.4rem;
-      padding: 15px; }
+      font-size: 1.4rem; }
       .p-global-menu ul li a, .p-global-menu__list li a {
+        display: inline-block;
         text-decoration: none;
-        color: #444444; }
+        color: #444444;
+        line-height: 1.2;
+        padding: 15px; }
         .p-global-menu ul li a:hover, .p-global-menu ul li a:visited, .p-global-menu ul li a:focus, .p-global-menu ul li a:active, .p-global-menu__list li a:hover, .p-global-menu__list li a:visited, .p-global-menu__list li a:focus, .p-global-menu__list li a:active {
           color: #2b2b2b; }
       .p-global-menu ul li.menu-item-has-children, .p-global-menu__list li.menu-item-has-children {
@@ -1844,9 +1846,13 @@ img {
           width: 200px;
           text-align: left; }
           .p-global-menu ul li .sub-menu li a, .p-global-menu__list li .sub-menu li a {
-            color: white; }
+            display: inline-block;
+            color: white;
+            transition: all .5s ease; }
             .p-global-menu ul li .sub-menu li a:hover, .p-global-menu ul li .sub-menu li a:visited, .p-global-menu ul li .sub-menu li a:focus, .p-global-menu ul li .sub-menu li a:active, .p-global-menu__list li .sub-menu li a:hover, .p-global-menu__list li .sub-menu li a:visited, .p-global-menu__list li .sub-menu li a:focus, .p-global-menu__list li .sub-menu li a:active {
               color: #e6e6e6; }
+            .p-global-menu ul li .sub-menu li a:hover, .p-global-menu__list li .sub-menu li a:hover {
+              padding-left: .75em; }
           .p-global-menu ul li .sub-menu li.menu-item-has-children, .p-global-menu__list li .sub-menu li.menu-item-has-children {
             position: relative; }
             .p-global-menu ul li .sub-menu li.menu-item-has-children:before, .p-global-menu__list li .sub-menu li.menu-item-has-children:before {
