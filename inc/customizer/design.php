@@ -43,6 +43,3 @@ $panel   = Framework::get_panel( 'design' );
 $section = Framework::get_section( 'text' );
 $control = Framework::get_control( 'post-archive-title' );
 $control->join( $section )->join( $panel );
-$control->partial([
-	'selector'            => '.c-page-header__title',
-]);

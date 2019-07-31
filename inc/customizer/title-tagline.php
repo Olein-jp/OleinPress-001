@@ -12,7 +12,7 @@ $wordpress_link = sprintf(
 );
 
 $theme_by = sprintf(
-	__( 'Theme: OleinPress - Just Blog by %s', 'op001' ),
+	__( 'Theme: OleinPress 001 - Just Blog by %s', 'op001' ),
 	$theme_link
 );
 
@@ -41,6 +41,3 @@ $section = Framework::get_section( 'title_tagline' );
 $control = Framework::get_control( 'copyright' );
 
 $control->join( $section );
-$control->partial( [
-	'selector' => '.p-copyright',
-] );
