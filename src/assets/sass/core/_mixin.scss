@@ -88,6 +88,21 @@
 
   table {
     margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    a {
+      @include link($base-font-color_text);
+    }
+    td,
+    th {
+      margin-bottom: 2em;
+      border-collapse: collapse;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+    th {
+      text-align: center;
+    }
   }
 
   img {
