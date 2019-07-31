@@ -201,7 +201,6 @@ require get_template_directory() . '/inc/comment-settings.php';
 /**
  * customizer
  */
-require get_template_directory() . '/inc/customizer/initialize.php';
 require get_template_directory() . '/inc/customizer/customizer.php';
 
 /**

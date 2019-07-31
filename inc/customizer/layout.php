@@ -6,7 +6,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
  */
 Framework::control(
 	'radio',
-	'op-footer-col-number',
+	'footer-col-number',
 	[
 		'label' => __( 'Number of footer widget column','op001' ),
 		'default' => '3',
@@ -38,15 +38,14 @@ Framework::panel(
  * Section: Site header
  */
 Framework::section(
-	'site-footer',
+	'footer',
 	[
-		'title' => __( 'Site footer', 'op001' ),
-		'description' => __( 'Customize layout of site footer area', 'op001' ),
+		'title' => __( 'footer', 'op001' ),
 		'priority' => 130,
 	]
 );
 
 $panel   = Framework::get_panel( 'layout' );
-$section = Framework::get_section( 'site-footer' );
-$control = Framework::get_control( 'op-footer-col-number' );
+$section = Framework::get_section( 'footer' );
+$control = Framework::get_control( 'footer-col-number' );
 $control->join( $section )->join( $panel );

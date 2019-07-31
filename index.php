@@ -17,7 +17,7 @@ get_header();
 	<div id="primary" class=p-content-area">
 		<main id="main" class="p-site-main">
 			<header class="c-page-header">
-				<p class="c-page-header__title">New Posts</p>
+				<p class="c-page-header__title"><?php echo get_theme_mod( 'post-archive-title' ); ?></p>
 			</header>
 			<div class="p-entry-wrap">
 

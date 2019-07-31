@@ -1,5 +1,5 @@
 <?php
-//use Inc2734\WP_Customizer_Framework\Framework;
+new \Inc2734\WP_Customizer_Framework\Bootstrap();
 /*
  * Remove default panel
  */
@@ -16,14 +16,19 @@ function op_remove_default_customizer_section( $wp_customize ) {
 /**
  * Layout
  */
-require get_template_directory() . '/inc/customizer/customizer-layout.php';
+require get_template_directory() . '/inc/customizer/layout.php';
 
 /**
- * Theme option
+ * Slider
  */
-require get_template_directory() . '/inc/customizer/customizer-slider.php';
+require get_template_directory() . '/inc/customizer/slider.php';
+
+/**
+ * Design
+ */
+require get_template_directory() . '/inc/customizer/design.php';
 
 /**
  * title tagline
  */
-require get_template_directory() . '/inc/customizer/customizer-title-tagline.php';
+require get_template_directory() . '/inc/customizer/title-tagline.php';
