@@ -31,12 +31,40 @@ Framework::control(
 	]
 );
 
+Framework::control(
+	'number',
+	'auto-play-speed',
+	[
+		'label' => __( 'Auto play speed', 'op001' ),
+		'description' => __( 'You can set play speed of slider changing to next image', 'op001' ),
+		'priority' => 190,
+		'default' => '3000',
+		'input_attrs' => [
+			'step' => 100,
+		],
+	]
+);
+
+Framework::control(
+	'number',
+	'speed',
+	[
+		'label' => __( 'During speed', 'op001' ),
+		'description' => __( 'You can set during speed of slider changing to next image', 'op001' ),
+		'priority' => 210,
+		'default' => '300',
+		'input_attrs' => [
+			'step' => 100,
+		],
+	]
+);
+
 if ( ! is_customize_preview() ) {
 	return;
 }
 
 /**
- * Section: Site header
+ * Section: slider
  */
 Framework::section(
 	'section-slider',
@@ -57,4 +85,12 @@ $control->join( $section );
 
 $section = Framework::get_section( 'section-slider' );
 $control = Framework::get_control( 'slider-image-03' );
+$control->join( $section );
+
+$section = Framework::get_section( 'section-slider' );
+$control = Framework::get_control( 'auto-play-speed' );
+$control->join( $section );
+
+$section = Framework::get_section( 'section-slider' );
+$control = Framework::get_control( 'speed' );
 $control->join( $section );

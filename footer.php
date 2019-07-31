@@ -40,6 +40,8 @@
             arrows: false,
             autoplay: true,
             fade: true,
+            autoplaySpeed: <?php echo get_theme_mod( 'auto-play-speed' ); ?>,
+			speed: <?php echo get_theme_mod( 'speed' ); ?>,
             slidesToShow: 1,
         });
     });
