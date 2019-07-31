@@ -2210,6 +2210,12 @@ img {
   font-size: 1.6rem;
   line-height: 1.3;
   margin: 0; }
+  @media screen and (min-width: 992px) {
+    .p-posts-navigation__title {
+      transition: all 1s ease; }
+      .p-posts-navigation__title:hover {
+        transition: all 1s ease;
+        background-color: #fff; } }
   .p-posts-navigation__title a {
     color: #444444; }
     .p-posts-navigation__title a:hover, .p-posts-navigation__title a:visited, .p-posts-navigation__title a:focus, .p-posts-navigation__title a:active {
