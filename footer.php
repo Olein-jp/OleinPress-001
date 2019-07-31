@@ -26,7 +26,7 @@
 
 		<div class="p-copyright">
 			<p class="c-container">
-				<?php echo get_theme_mod( 'op-copyright' ); ?>
+				<?php echo get_theme_mod( 'copyright' ); ?>
 			</p>
 		</div>
 	</footer><!-- #colophon -->

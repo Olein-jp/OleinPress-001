@@ -9,7 +9,6 @@ Framework::control(
 	'post-archive-title',
 	[
 		'label' => __( 'Post archive title', 'op001' ),
-		'transport' => 'PostMessage',
 		'default' => 'New Post',
 	]
 );
@@ -33,15 +32,15 @@ Framework::panel(
  * Section: Titles
  */
 Framework::section(
-	'titles',
+	'text',
 	[
-		'title' => __( 'titles', 'op001' ),
+		'title' => __( 'Text', 'op001' ),
 		'priority' => 110,
 	]
 );
 
 $panel   = Framework::get_panel( 'design' );
-$section = Framework::get_section( 'titles' );
+$section = Framework::get_section( 'text' );
 $control = Framework::get_control( 'post-archive-title' );
 $control->join( $section )->join( $panel );
 $control->partial([

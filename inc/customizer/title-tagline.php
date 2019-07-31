@@ -25,9 +25,8 @@ $copyright = $theme_by . ' ' . $powered_by;
 
 Framework::control(
 	'text',
-	'op-copyright',
+	'copyright',
 	[
-		'transport'   => 'postMessage',
 		'label'       => __( 'Copyright', 'op001' ),
 		'description' => __( 'HTML available', 'op001' ),
 		'default'     => $copyright,
@@ -39,7 +38,7 @@ if ( ! is_customize_preview() ) {
 }
 
 $section = Framework::get_section( 'title_tagline' );
-$control = Framework::get_control( 'op-copyright' );
+$control = Framework::get_control( 'copyright' );
 
 $control->join( $section );
 $control->partial( [
